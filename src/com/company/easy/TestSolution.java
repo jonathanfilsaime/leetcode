@@ -123,4 +123,13 @@ public class TestSolution {
         assertEquals(0, test.searchInsert(new int[]{1,2,3,4,5}, 0));
     }
 
+    @Test
+    public void testLengthOfLastWord() {
+        Solution test = new Solution();
+
+        assertEquals(5, test.lengthOfLastWord("hello world"));
+        assertEquals(1, test.lengthOfLastWord("hello ."));
+        assertEquals(4, test.lengthOfLastWord("hello mr john"));
+    }
+
 }

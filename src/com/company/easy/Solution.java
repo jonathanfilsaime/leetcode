@@ -249,4 +249,10 @@ public class Solution {
         }
         return 0;
     }
+
+    public int lengthOfLastWord(String s) {
+        String[] stringArray = s.split(" ");
+        List<String> wordList = Arrays.asList(stringArray);
+        return wordList.get(wordList.size()-1).length();
+    }
 }
