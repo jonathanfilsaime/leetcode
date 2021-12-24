@@ -255,4 +255,29 @@ public class Solution {
         List<String> wordList = Arrays.asList(stringArray);
         return wordList.get(wordList.size()-1).length();
     }
+
+    public int[] plusOne(int[] digits) {
+        return plusOneHelper(digits, digits.length -1, 1);
+    }
+
+    public int[] plusOneHelper(int[] digits, int position, int carry) {
+        if(digits[position] == 9 && position != 0) {
+            digits[position] = 0;
+            return plusOneHelper(digits, position -1, 1);
+        } else if (digits[position] != 9 && position != 0) {
+            digits[position] += carry;
+            return digits;
+        } else if (digits[position] != 9 && position == 0) {
+            digits[position] += 1;
+            return digits;
+        } else {
+            digits[position] = 0;
+            int[] response = new int[digits.length + 1];
+            for(int i = 0; i < digits.length; i++){
+                response[i+1] = digits[i];
+            }
+            response[0] = 1;
+            return response;
+        }
+    }
 }

@@ -132,4 +132,17 @@ public class TestSolution {
         assertEquals(4, test.lengthOfLastWord("hello mr john"));
     }
 
+    @Test
+    public void testPlusOne() {
+        Solution test = new Solution();
+
+        assertEquals(3, test.plusOne(new int[]{3,2,1})[0]);
+        assertEquals(2, test.plusOne(new int[]{3,2,1})[1]);
+        assertEquals(2, test.plusOne(new int[]{3,2,1})[2]);
+        assertEquals(1, test.plusOne(new int[]{0})[0]);
+        assertEquals(8, test.plusOne(new int[]{0,0,7})[2]);
+        assertEquals(9, test.plusOne(new int[]{9,8,7,6,5,4,3,2,1,0})[0]);
+        assertEquals(1, test.plusOne(new int[]{9,8,7,6,5,4,3,2,1,0})[9]);
+    }
+
 }
